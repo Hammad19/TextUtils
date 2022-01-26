@@ -4,13 +4,16 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 
 
+
 function App(props) {
   return (
   <>
   <Navbar title = "TextUtils" />
-  <TextForm title = "Enter Value to Analyze"/>
+  <TextForm title = "Enter Text to Analyse"/>
   </>  
 );
 }
 
 export default App;
+
+
