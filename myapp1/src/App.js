@@ -1,13 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-let name = "harry";
-let counter;
 
-function deshabilitarBoton() {  
-  counter = counter+1;   
-  
-} 
 function App() {
   return (
   <>
@@ -18,16 +12,13 @@ function App() {
                   <i className="fa fa-bars fa-2x"></i>
                </div>
                <div className="logo">
-                  LOGO
+                  TextUtils
                </div>
                <div className="menu">
                   <ul>
                      <li><a href="#">Home</a></li>
                      <li><a href="#">About</a></li>
-                     <li><a href="#">Blog</a></li>
-                     <li><a href="#">Contact</a></li>
-                     <li><a href="#">Contact</a></li>
-                     <li><a href="#">Contact</a></li>
+                     
                   </ul>
                </div>
             </nav>
