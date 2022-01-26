@@ -1,0 +1,45 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
+export default function Navbar(props) {
+  return (
+    <div className="wrapper">
+    <header>
+       <nav>
+          <div className="menu-icon">
+             <i className="fa fa-bars fa-2x"></i>
+          </div>
+          <div className="logo">
+             {props.title}
+          </div>
+          <div className="menu">
+             <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                
+             </ul>
+          </div>
+       </nav>
+    </header>
+    <div className="content">
+       <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+       </p>
+       <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+       </p>
+    </div>
+ </div>
+    );
+}
+
+Navbar.propTypes =
+{
+    title: PropTypes.string
+}
+
+Navbar.defaultProps =
+{
+    title: 10,
+}
