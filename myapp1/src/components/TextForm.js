@@ -51,11 +51,14 @@ export default function TextForm(props) {
       <textarea className="form-control" rows={8} value={text} onChange={handleOnChange}>
       </textarea>
     </div>
-    <button type="button" className="btn btn-primary my-3"  onClick={handleOnClick}>Get Into UpperCase</button>
-    <button type="button" className="btn btn-primary my-4" onClick={toLowerCase}>Get Into LowerCase</button>
-    <button type="button" className="btn btn-primary my-4" onClick={clearText}>Clear Text</button>
-    <button type="button" className="btn btn-primary my-4" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
     </div>
+    <div className="container my-3">
+    <button  type="button" className="btn btn-primary mr-2"  onClick={handleOnClick}>Get Into UpperCase</button>
+    <button type="button" className="btn btn-primary mr-2" onClick={toLowerCase}>Get Into LowerCase</button>
+    <button type="button" className="btn btn-primary mr-2 " onClick={clearText}>Clear Text</button>
+    <button type="button" className="btn btn-primary mr-2 " onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+    </div>
+    
     <div className='container my-3'>
       <h1>
         Your Text Summary
