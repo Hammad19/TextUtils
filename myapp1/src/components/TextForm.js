@@ -3,11 +3,10 @@ import '../index.css';
 
 export default function TextForm(props) {
 
+
   const [text,SetText] = useState("Enter Text");
-
-  const [btntext,Setbtntext] = useState("Enable Dark Mode");
-
-  const [count,SetCount] = useState(0);
+  const arr = text.split(' ')
+  const [count,SetCount] = useState(arr.filter(word => word !== '').length);
 
   const handleOnChange = (event) => {
     SetText(event.target.value);
@@ -19,24 +18,29 @@ export default function TextForm(props) {
 
     let newtext = text.toUpperCase();
     SetText(newtext);
+    props.showalert('Successfully Converted to UpperCase','success')
+
   }
 
   const toLowerCase = () => {
 
     let newtext = text.toLowerCase();
     SetText(newtext);
+    props.showalert('Successfully Converted to LowerCase','success')
   }
 
   const clearText = () => {
 
     let newtext = "";
     SetText(newtext);
+    props.showalert('Successfully Cleared Text','success')
   }
 
   const removeExtraSpaces = () => {
 
     let newtext = text.replace(/\s+/g, ' ').trim()
     SetText(newtext);
+    props.showalert('Successfully Removed Extra Spaces','success')
   }
 
 
