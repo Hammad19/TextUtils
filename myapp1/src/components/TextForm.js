@@ -36,10 +36,7 @@ export default function TextForm(props) {
     SetText(newtext);
   }
 
-  // const wordCounter = () => {
 
-    
-  // }
   return (
     <>
     <div className="container my-3">
@@ -53,10 +50,10 @@ export default function TextForm(props) {
     </div>
     </div>
     <div className="container my-3">
-    <button  type="button" className="btn btn-primary mr-2"  onClick={handleOnClick}>Get Into UpperCase</button>
-    <button type="button" className="btn btn-primary mr-2" onClick={toLowerCase}>Get Into LowerCase</button>
-    <button type="button" className="btn btn-primary mr-2 " onClick={clearText}>Clear Text</button>
-    <button type="button" className="btn btn-primary mr-2 " onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+    <button  type="button" className="btn btn-primary mx-2"  onClick={handleOnClick}>Get Into UpperCase</button>
+    <button type="button" className="btn btn-primary mx-2" onClick={toLowerCase}>Get Into LowerCase</button>
+    <button type="button" className="btn btn-primary mx-2 " onClick={clearText}>Clear Text</button>
+    <button type="button" className="btn btn-primary mx-2 " onClick={removeExtraSpaces}>Remove Extra Spaces</button>
     </div>
     
     <div className='container my-3'>
