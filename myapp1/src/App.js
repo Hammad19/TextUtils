@@ -4,17 +4,14 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
-
-
+import About from './components/About';
 
 function App(props) {
 
   const [mode,setMode] = useState('light');
   const [alert,setAlert] = useState(null);
-
   const [myStyle,setmyStyle] = useState(
     {
-
     color: 'black',
     backgroundColor: 'white'
   });
@@ -53,6 +50,7 @@ function App(props) {
 
       })
       setMode('light')
+      showalert('Light Mode Has Been Enabled','success')
       document.body.style.backgroundColor= 'white';
     }
   }
@@ -60,7 +58,8 @@ function App(props) {
   <>
   <Navbar mode = {mode} title = "TextUtils"  toggleMode={toggleMode}/>
   <Alert alert = {alert}/>
-  <TextForm showalert= {showalert} myStyle = {myStyle} title = "Enter Text to Analyse"/>
+  {/* <TextForm showalert= {showalert} myStyle = {myStyle} title = "Enter Text to Analyse"/> */}
+  <About mode= {mode}/>
   </>  
 );
 }
