@@ -8,8 +8,11 @@ import About from './components/About';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  Router
 } from "react-router-dom";
+
+
 
 function App(props) {
 
@@ -51,21 +54,30 @@ function App(props) {
     {
       setmyStyle({
         color: 'black',
-        backgroundColor: 'white'
+        backgroundColor: '#F1F1F1'
 
       })
       setMode('light')
       showalert('Light Mode Has Been Enabled','success')
-      document.body.style.backgroundColor= 'white';
+      document.body.style.backgroundColor= '#F1F1F1';
     }
   }
   return (
+    
   <>
+  
   <Navbar mode = {mode} title = "TextUtils"  toggleMode={toggleMode}/>
   <Alert alert = {alert}/>
-  {/* <TextForm showalert= {showalert} myStyle = {myStyle} title = "Enter Text to Analyse"/> */}
-  <About mode= {mode}/>
+
+  <Routes>
+    <Route path = "/About" element= {<About mode= {mode}/>}></Route>
+    <Route path = "/" element= {<TextForm mode={mode} showalert= {showalert} myStyle = {myStyle} title = "Enter Text to Analyse"/>}></Route>
+  </Routes>
+  {/*  */}
+
   </>  
+
+
 );
 }
 
