@@ -9,8 +9,8 @@ export default function About(props) {
               <div className={`${props.mode==='light'?'about-title':'about-title-dark'} clearfix`}>
                   <h1>About <span>TextUtils</span></h1>
                   <h3>Manipulate Your Text in every Possible Way </h3>
-                  <p className="about-paddingB">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet dolor libero, eget venenatis mauris finibus dictum. Vestibulum quis elit eget neque porttitor congue non sit amet dolor. Proin pretium purus a lorem ornare </p>
-                  <p>sed lobortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nulla eros mauris, convallis et sem tempus, viverra hendrerit sapien</p>
+                  <p className="about-paddingB">We provide free tools to help you with your daily tasks. You will find tools for formatting source code, converters, tools for handling text, such as remove duplicate characters, empty lines, text sorter and many others. Check the current features below and feel free to recommend a new feature by contacting us. </p>
+                  <p>Text utils is app that can be use to help with counting text, formatting text and modify text.</p>
           <div className="about-icons"> 
               <ul >
                   <li><a href="https://www.facebook.com/"><i id="social-fb" className="fa fa-facebook-square fa-3x social"></i></a> </li>
@@ -18,8 +18,6 @@ export default function About(props) {
                   <li> <a href="https://plus.google.com/"><i id="social-gp" className="fa fa-google-plus-square fa-3x social"></i></a> </li>
                   <li> <a href="mailto:bootsnipp@gmail.com"><i id="social-em" className="fa fa-envelope-square fa-3x social"></i></a> </li>
               </ul>       
- 
- 
  
 
 </div>
