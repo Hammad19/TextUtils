@@ -5,6 +5,11 @@ import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
 import About from './components/About';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App(props) {
 
