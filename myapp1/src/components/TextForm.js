@@ -36,6 +36,17 @@ export default function TextForm(props) {
     props.showalert('Successfully Cleared Text','success')
   }
 
+  const copyText = () => {
+
+    var copyText = document.getElementById("myInput");
+
+  
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+      navigator.clipboard.writeText(copyText.value);
+        props.showalert('Successfully Copied Text','success')
+  }
+
   const removeExtraSpaces = () => {
 
     let newtext = text.replace(/\s+/g, ' ').trim()
@@ -56,22 +67,25 @@ export default function TextForm(props) {
     <br></br>
     <div className="input-group mb-3">
     
-      <textarea style={props.myStyle} className="form-control" rows={8} value={text} onChange={handleOnChange}>
+      <textarea id ="myInput" style={props.myStyle} className="form-control" rows={8} value={text} onChange={handleOnChange}>
       </textarea>
     </div>
     </div>
     <div className="container my-3 btn-group-justified">
       <div className="btn-group">
-        <button  type="button" className="btn btn-primary mx-2 col-3"  onClick={handleOnClick}>Get Into UpperCase</button>
+        <button  type="button" className={`btn btn-${props.mode==='light'?'dark':'light'} btn-rounded mx-2`}  onClick={handleOnClick}>Get Into UpperCase</button>
       </div>
       <div className="btn-group">
-        <button type="button" className="btn btn-primary mx-2 col-3" onClick={toLowerCase}>Get Into LowerCase</button>
+        <button type="button" className={`btn btn-${props.mode==='light'?'dark':'light'} btn-rounded mx-2`} onClick={toLowerCase}>Get Into LowerCase</button>
       </div>
       <div className="btn-group">
-      <button type="button" className="btn btn-primary mx-2 col-3" onClick={clearText}>Clear Text</button>
+      <button type="button" className={`btn btn-${props.mode==='light'?'dark':'light'} btn-rounded mx-2`} onClick={clearText}>Clear Text</button>
       </div>
       <div className="btn-group">
-      <button type="button" className="btn btn-primary mx-2 col-3" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+      <button type="button" className={`btn btn-${props.mode==='light'?'dark':'light'} btn-rounded mx-2`} onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+      </div>
+      <div className="btn-group">
+      <button type="button" className={`btn btn-${props.mode==='light'?'dark':'light'} btn-rounded mx-2`} onClick={copyText}>Copy Text</button>
       </div>
     </div>
     <div className='container my-5'>
