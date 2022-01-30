@@ -18,10 +18,11 @@ function App(props) {
 
   const [mode,setMode] = useState('light');
   const [alert,setAlert] = useState(null);
+  
   const [myStyle,setmyStyle] = useState(
     {
     color: 'black',
-    backgroundColor: 'white'
+    backgroundColor: '#F1F1F1'
   });
 
   const showalert = (message,type)=>
