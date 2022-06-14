@@ -22,7 +22,7 @@ function App(props) {
   const [myStyle,setmyStyle] = useState(
     {
     color: 'black',
-    backgroundColor: '#F1F1F1'
+    backgroundColor: '#F1F1F1',
   });
 
   const showalert = (message,type)=>
@@ -66,10 +66,9 @@ function App(props) {
   return (
     
   <>
-  
+
   <Navbar mode = {mode} title = "TextUtils"  toggleMode={toggleMode}/>
   <Alert alert = {alert}/>
-
   <Routes>
     <Route path = "/About" element= {<About mode= {mode}/>}></Route>
     <Route path = "/" element= {<TextForm mode={mode} showalert= {showalert} myStyle = {myStyle} title = "Enter Text to Analyse"/>}></Route>
