@@ -63,7 +63,7 @@ export default function TextForm(props) {
     <br></br>
     <div className="input-group mb-3">
     
-      <textarea id ="myInput" style={props.myStyle} className="form-control" rows={8} value={text} onChange={handleOnChange}>
+      <textarea id ="myInput" style={props.myStyle} className="form-control" rows={10} value={text} onChange={handleOnChange}>
       </textarea>
     </div>
     </div>
